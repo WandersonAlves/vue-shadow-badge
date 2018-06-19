@@ -1,0 +1,23 @@
+{
+  "name": "vue-shadow-badge",
+  "version": "0.0.1",
+  "description": "Simple badge directive using shadow-dom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "badge",
+    "directive",
+    "counter",
+    "increment",
+    "decrement",
+    "vuex"
+  ],
+  "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
