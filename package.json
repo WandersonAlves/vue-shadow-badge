@@ -2,9 +2,10 @@
   "name": "vue-shadow-badge",
   "version": "0.0.1",
   "description": "Simple badge directive using shadow-dom",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node src",
+    "build": "rimraf lib && babel src -d lib"
   },
   "keywords": [
     "vue",
@@ -17,7 +18,13 @@
   ],
   "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "vue": "^2.5.16"
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rimraf": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WandersonAlves/vue-shadow-dom"
   }
 }
