@@ -23,7 +23,7 @@ const make = (el, binding) => {
     }
   }
   else {
-    throw 'Your browser dont support shadow dom';
+    throw "Your browser doesn't support shadow dom";
   } 
 }
 
