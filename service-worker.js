@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.437647d49607cb935527240bc3413d96.js"
+  "/precache-manifest.c741a4ee72e40f6dce6211d8bb06bb1c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-shadow-badge"});
