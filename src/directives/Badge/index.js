@@ -6,7 +6,6 @@ import {
 
 const make = (el, binding) => {
   if (window.getComputedStyle(el).getPropertyValue('position') !== 'relative') {
-    console.warn('Component MUST be position: relative, setting then for you :3');
     el.style.position = 'relative';
   }
   if (binding.value) {
