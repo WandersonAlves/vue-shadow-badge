@@ -1,27 +1,36 @@
 <template>
   <div id="app">
-    <h1 v-badge="3">Oi</h1>
+    <jumbo />
+    <Introduction />
   </div>
 </template>
 
 <script>
-import Badge from './directives/Badge';
+import Jumbo from './components/Jumbo.vue';
+import Introduction from './components/Introduction.vue';
 
 export default {
   name: 'app',
-  directives: {
-    Badge
+  components: {
+    Jumbo,
+    Introduction
+  },
+  mounted() {
+    // Check support for shadow dom
+    if (document.head.createShadowRoot || document.head.attachShadow) {
+      console.log('yay, it works');
+    }
+    else {
+      console.log('sad');
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 </style>
