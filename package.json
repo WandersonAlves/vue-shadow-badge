@@ -1,36 +1,58 @@
 {
   "name": "vue-shadow-badge",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simple badge directive using shadow-dom",
-  "main": "lib/index.js",
-  "scripts": {
-    "start": "babel-node src",
-    "build": "rm -rf ./lib && babel src -d lib",
-    "prepublish": "npm run build"
-  },
-  "keywords": [
-    "vue",
-    "badge",
-    "directive",
-    "counter",
-    "increment",
-    "decrement",
-    "vuex"
-  ],
+  "main": "./dist/Badge.common.js",
   "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WandersonAlves/vue-shadow-badge"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name Badge ./src/directives/Badge/index.js"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "dependencies": {
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.16"
+  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-minify": "^0.4.3",
-    "babel-preset-env": "^1.7.0"
+    "@vue/cli-plugin-babel": "^3.0.0-rc.3",
+    "@vue/cli-plugin-eslint": "^3.0.0-rc.3",
+    "@vue/cli-plugin-pwa": "^3.0.0-rc.3",
+    "@vue/cli-service": "^3.0.0-rc.3",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WandersonAlves/vue-shadow-badge"
-  }
+  ]
 }

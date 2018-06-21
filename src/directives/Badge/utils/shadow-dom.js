@@ -18,7 +18,7 @@ export function updateShadowDom(binding, root) {
       top: ${position.top || 'unset'};
       bottom: ${position.bottom || 'unset'};
       left: ${position.left || 'unset'};
-      font-size: .8em;
+      font-size: .6em;
       background: #00796bcc;
       align-items: center;
       justify-content: center;
