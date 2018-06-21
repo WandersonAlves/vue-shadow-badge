@@ -1,6 +1,6 @@
 {
-  "name": "temp",
-  "short_name": "temp",
+  "name": "vue-shadow-dom",
+  "short_name": "vue-shadow-dom",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
