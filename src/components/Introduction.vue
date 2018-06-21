@@ -7,13 +7,17 @@
     </div>
     <div class="area-separator">
       <h1 v-badge="badge2Config">Examples</h1>
-      <p>Badge on a Button!</p>
-      <button-outline v-badge="{
-        value: buttonCounter,
-        right: '-25px',
-        top: '-4px',
-        styles: buttonBadgeStyle
-      }" msg="Click Me!" @click.native="buttonCounter++"></button-outline>
+      <div class="flex-row">
+        <div class="flex-item-column">
+          <p>Badge on a Button!</p>
+          <button-outline v-badge="{
+            value: buttonCounter,
+            right: '-25px',
+            top: '-4px',
+            styles: buttonBadgeStyle
+          }" msg="Click Me!" @click.native="buttonCounter++"></button-outline>
+        </div>
+      </div>
     </div>
     
   </section>
@@ -54,8 +58,22 @@ section {
   word-break: break-all;
   line-height: 25px;
 
+  .flex-row {
+    display: flex;
+
+    > div {
+      margin-right: 40px;
+    }
+  }
+
   .area-separator {
     margin: 40px 0;
+  }
+
+  .flex-item-column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
   }
 
   h1 {
