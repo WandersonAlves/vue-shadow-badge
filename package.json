@@ -1,5 +1,5 @@
 {
-  "name": "@wandersonalves/vue-shadow-badge",
+  "name": "vue-shadow-badge",
   "version": "0.0.1",
   "description": "Simple badge directive using shadow-dom",
   "main": "lib/index.js",
