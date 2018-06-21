@@ -28,6 +28,7 @@ export function updateShadowDom(binding, root) {
       font-weight: 600;
       height: 18px;
       border-radius: 50%;
+      ${binding.value.styles}
     }
     </style>
     <content></content>

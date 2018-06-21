@@ -4,6 +4,10 @@ import {
   updateShadowDom
 } from './utils/shadow-dom';
 
+/**
+ * Badge directive using shadowDOM
+ * accept the following values: {value: number, right: number, left: number, top: number, bottom: number, styles: string}
+ */
 export default Vue.directive('badge', {
   update(el, binding) {
     if (window.getComputedStyle(el).getPropertyValue('position') !== 'relative') {
