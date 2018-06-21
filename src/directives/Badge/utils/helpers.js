@@ -34,3 +34,7 @@ export function setBadgePosition(position, bindingValue) {
     };
   }
 }
+
+export function canThisBrowserUseShadowDom() {
+  return (document.head.createShadowRoot || document.head.attachShadow);
+}
