@@ -15,6 +15,8 @@ In my search for badges, i only found component based badges, for me, this isn't
 
 Sadly, shadow-dom isn't supported in all browsers, so keep in mind this.
 
+https://caniuse.com/#feat=shadowdom
+
 ___
 
 ## Usage
