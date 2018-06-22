@@ -13,6 +13,8 @@ Use `yarn add vue-shadow-badge` or `npm i --save vue-shadow-badge`
 
 In my search for badges, i only found component based badges, for me, this isn't the ideal, so a build a directive based badge that is extensible and highly configurable.
 
+With shadow-dom is easy to create pseudo-elements in any element with a shadowRoot, just look at `src/directives/Badge/utils/shadow-dom.js`.
+
 Sadly, shadow-dom isn't supported in all browsers, so keep in mind this.
 
 https://caniuse.com/#feat=shadowdom
