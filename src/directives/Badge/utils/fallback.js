@@ -13,8 +13,6 @@ export function createBadgeFallback(el, binding) {
   const timestamp = (new Date().getTime() / 1000).toString().replace('.', '');
   const attrName = `badge-${timestamp}`;
 
-  console.log(attrName)
-
   el.setAttribute(attrName, '');
 
   style.innerHTML = `.vue-shadow-badge[${attrName}]::after {
