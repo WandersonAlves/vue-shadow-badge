@@ -4,7 +4,7 @@
   "description": "Simple badge directive using shadow-dom",
   "main": "./dist/Badge.common.js",
   "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
-  "homepage": "https://WandersonAlves.gihub.io/vue-shadow-badge",
+  "homepage": "https://wandersonalves.github.io/vue-shadow-badge",
   "license": "MIT",
   "repository": {
     "type": "git",
