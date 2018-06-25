@@ -13,7 +13,7 @@ import {
 } from './utils/fallback';
 
 const make = (el, binding) => {
-  if (canThisBrowserUseShadowDom()) {
+  if (binding.value.useShadowDom !== false && canThisBrowserUseShadowDom()) {
     setElementToRelative(el)
     if (binding.value) {
       if (el.shadowRoot) {
@@ -36,6 +36,6 @@ const make = (el, binding) => {
 /**
  * Badge directive using shadowDOM
  * accept the following values: 
- * {value: number, right: number, left: number, top: number, bottom: number, styles: string}
+ * {value: number, right: number, left: number, top: number, bottom: number, styles: string, useShadowDom: boolean}
  */
 export default Vue.directive('badge', make);
