@@ -24,4 +24,4 @@ export function createBadgeFallback(el, binding) {
   document.getElementsByTagName('head')[0].appendChild(style);
 
   el.className = `${el.className} vue-shadow-badge`
-};
+}
