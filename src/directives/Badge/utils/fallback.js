@@ -13,9 +13,16 @@ export function createBadgeFallback(el, binding) {
 
   Object.keys(el.dataset).forEach((key, index) => {
     if (index === 0) {
-      className = `data-${key}`;
+      if (key[0] === 'v' && key[1] !== '-') {
+        className = `data-v-${key.substr(1, key.length-1).toLowerCase()}`
+      }
+      else {
+        className = `data-${key}`;
+      }
     }
   })
+
+  console.log(el.dataset, className)
 
   style.innerHTML = `.vue-shadow-badge[${className}]::after {
     ${styleString}
