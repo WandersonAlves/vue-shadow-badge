@@ -1,5 +1,5 @@
 <template>
-  <button>{{msg}}</button>
+  <button class="oi tudo bom com vc">{{msg}}</button>
 </template>
 <script>
 export default {

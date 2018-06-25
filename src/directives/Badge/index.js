@@ -4,14 +4,17 @@ import {
   updateShadowDom
 } from './utils/shadow-dom';
 import {
-  canThisBrowserUseShadowDom
+  canThisBrowserUseShadowDom,
+  setElementToRelative
 } from './utils/helpers';
+
+import {
+  createBadgeFallback
+} from './utils/fallback';
 
 const make = (el, binding) => {
   if (canThisBrowserUseShadowDom()) {
-    if (window.getComputedStyle(el).getPropertyValue('position') !== 'relative') {
-      el.style.position = 'relative';
-    }
+    setElementToRelative(el)
     if (binding.value) {
       if (el.shadowRoot) {
         let root = el.shadowRoot;
@@ -23,7 +26,10 @@ const make = (el, binding) => {
     }
   }
   else {
-    throw "Your browser doesn't support shadow dom";
+    if (binding.value) {
+      setElementToRelative(el);
+      createBadgeFallback(el, binding);
+    }
   } 
 }
 
