@@ -1,18 +1,18 @@
 self.__precacheManifest = [
   {
-    "revision": "db70d0b9cb27ada1a260a2b35e756b8b",
-    "url": "fonts/open-sans-latin-400italic.db70d0b9.woff"
-  },
-  {
-    "revision": "6b2f8438c417ca58f89589eea402049d",
-    "url": "index.html"
-  },
-  {
     "revision": "6b3973ffe02bb6a8be0f8453506ec032",
     "url": "fonts/open-sans-latin-800italic.6b3973ff.woff2"
   },
   {
-    "revision": "a025e4dbdc5332be8809",
+    "revision": "e23a50bad38d3eadd81ea51ac0595403",
+    "url": "index.html"
+  },
+  {
+    "revision": "06bbd3188b34820cd83a0e0b3d0a6f57",
+    "url": "fonts/open-sans-latin-300italic.06bbd318.woff2"
+  },
+  {
+    "revision": "7a3bb75a2556d61df40d",
     "url": "chunk-vendors.e5027a23.css"
   },
   {
@@ -48,16 +48,16 @@ self.__precacheManifest = [
     "url": "fonts/open-sans-latin-800italic.79b58175.woff"
   },
   {
+    "revision": "db70d0b9cb27ada1a260a2b35e756b8b",
+    "url": "fonts/open-sans-latin-400italic.db70d0b9.woff"
+  },
+  {
+    "revision": "82b9c7a5a3f405032b1db71a25f67021",
+    "url": "img/logo.82b9c7a5.png"
+  },
+  {
     "revision": "8a648ff38ded89ea15916e84529d62d3",
     "url": "fonts/open-sans-latin-300italic.8a648ff3.woff"
-  },
-  {
-    "revision": "bf2d0783515b7d75c35bde69e01b3135",
-    "url": "fonts/open-sans-latin-400.bf2d0783.woff"
-  },
-  {
-    "revision": "06bbd3188b34820cd83a0e0b3d0a6f57",
-    "url": "fonts/open-sans-latin-300italic.06bbd318.woff2"
   },
   {
     "revision": "60c866748ff15f5b347fdba64596b1b1",
@@ -88,15 +88,19 @@ self.__precacheManifest = [
     "url": "fonts/open-sans-latin-400.cffb686d.woff2"
   },
   {
-    "revision": "a025e4dbdc5332be8809",
-    "url": "chunk-vendors.a025e4db.js"
+    "revision": "bf2d0783515b7d75c35bde69e01b3135",
+    "url": "fonts/open-sans-latin-400.bf2d0783.woff"
   },
   {
-    "revision": "e4b66e40392d091eb18f",
-    "url": "app.e8a912f6.css"
+    "revision": "7a3bb75a2556d61df40d",
+    "url": "chunk-vendors.7a3bb75a.js"
   },
   {
-    "revision": "e4b66e40392d091eb18f",
-    "url": "app.e4b66e40.js"
+    "revision": "dc7aaa0017a8e7c12a31",
+    "url": "app.dc7aaa00.js"
+  },
+  {
+    "revision": "dc7aaa0017a8e7c12a31",
+    "url": "app.14906d76.css"
   }
 ];
