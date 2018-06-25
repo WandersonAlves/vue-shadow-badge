@@ -19,6 +19,10 @@ Sadly, shadow-dom isn't supported in all browsers, so keep in mind this.
 
 https://caniuse.com/#feat=shadowdom
 
+### But...
+
+Now this directive have a fallback for browsers without shadow-dom. If you encounter something strange, please let me know it.
+
 ___
 
 ## Usage
@@ -119,4 +123,4 @@ You can use `styles` prop to set the positioning of the badge too! Just use `rig
 
 ## Contributing
 
-This is a beginner friendly open source project. Subtmit your PR, let's discuss some improvements.
+This is a beginner friendly open source project. Submit your PR, let's discuss some improvements.
