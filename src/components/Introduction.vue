@@ -9,7 +9,7 @@
       <h1 v-badge="badge2Config">Examples</h1>
       <div class="flex-row">
         <div class="flex-item-column">
-          <button-outline v-badge.down-left="{
+          <button-outline v-badge="{
             value: buttonCounter,
             right: '-28px',
             top: '-4px',
