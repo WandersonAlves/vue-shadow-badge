@@ -1,3 +1,8 @@
+/**
+ * Generate badge positioning
+ * @param {Object} values 
+ * @param {Object} modifiers 
+ */
 const generatePositioning = (values, modifiers) => {
   const positioningObject = {
     top: values.top || '0',
@@ -39,16 +44,27 @@ const generatePositioning = (values, modifiers) => {
 
 }
 
+/**
+ * Check if current browser has support for shadow-dom
+ */
 export function canThisBrowserUseShadowDom() {
   return (document.head.createShadowRoot || document.head.attachShadow);
 }
 
+/**
+ * If element is not relative, set it to relative
+ * @param {HTMLElement} el 
+ */
 export function setElementToRelative(el) {
   if (window.getComputedStyle(el).getPropertyValue('position') !== 'relative') {
     el.style.position = 'relative';
   }
 }
-
+/**
+ * Generate CSS attributes for current badge
+ * @param {string|number} content 
+ * @param {Object} binding
+ */
 export function generateStyle(content, binding) {  
   return `
     content: '${content}';
