@@ -1,5 +1,4 @@
 import {
-  setBadgePosition,
   generateStyle
 } from './helpers';
 
@@ -8,12 +7,11 @@ export function createShadowDom(el) {
 }
 
 export function updateShadowDom(binding, root) {
-  const position = setBadgePosition(binding.modifiers, binding.value);
   const content = Number.isInteger(binding.value) ? binding.value : binding.value.value;
   root.innerHTML = `
     <style>
     :host::after {
-      ${generateStyle(content, position, binding)}
+      ${generateStyle(content, binding)}
     }
     </style>
     <content></content>

@@ -1,14 +1,12 @@
 import {
   generateStyle,
-  setBadgePosition
 } from './helpers';
 
 export function createBadgeFallback(el, binding) {
   let style = document.createElement('style');
   
   const content = Number.isInteger(binding.value) ? binding.value : binding.value.value;
-  const position = setBadgePosition(binding.modifiers, binding.value);
-  const styleString = generateStyle(content, position, binding);
+  const styleString = generateStyle(content, binding);
 
   const timestamp = (new Date().getTime() / 1000).toString().replace('.', '');
   const attrName = `badge-${timestamp}`;

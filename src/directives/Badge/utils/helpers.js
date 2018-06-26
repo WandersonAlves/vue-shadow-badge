@@ -1,30 +1,30 @@
-const generatePositioning = (position, bindingValue) => {
+const generatePositioning = (values, modifiers) => {
   const positioningObject = {
-    top: bindingValue.top || '0',
-    bottom: bindingValue.bottom,
-    right: bindingValue.right || '-18px',
-    left: bindingValue.left
+    top: values.top || '0',
+    bottom: values.bottom,
+    right: values.right || '-18px',
+    left: values.left
   };
   let stringToReturn = '';
-  if (position['down-left']) {
+  if (modifiers['down-left']) {
     positioningObject.bottom = '-6px';
     positioningObject.left = '-18px';
     delete positioningObject.top;
     delete positioningObject.right;
   }
-  else if (position['down-right']) {
+  else if (modifiers['down-right']) {
     positioningObject.bottom = '-6px';
     positioningObject.right = '-18px';
     delete positioningObject.left;
     delete positioningObject.top;
   }
-  else if (position['up-left']) {
+  else if (modifiers['up-left']) {
     positioningObject.top = '0';
     positioningObject.left = '-18px';
     delete positioningObject.bottom;
     delete positioningObject.right;
   }
-  else if (position['up-right']) {
+  else if (modifiers['up-right']) {
     positioningObject.top = '0';
     positioningObject.right = '-18px';
     delete positioningObject.bottom;
@@ -35,33 +35,8 @@ const generatePositioning = (position, bindingValue) => {
       stringToReturn += `${value}: ${positioningObject[value]};\n`;
     }
   });
-  console.warn(stringToReturn)
   return stringToReturn;
 
-}
-
-export function setBadgePosition(position, bindingValue) {
-  if (position['down-left']) {
-    return {
-      bottom: '-6px',
-      left: '-18px'
-    };
-  } else if (position['down-right']) {
-    return {
-      bottom: '-6px',
-      right: '-18px'
-    };
-  } else if (position['up-left']) {
-    return {
-      top: '0',
-      left: '-18px'
-    };
-  } else {
-    return {
-      top: '0',
-      right: '-18px'
-    };
-  }
 }
 
 export function canThisBrowserUseShadowDom() {
@@ -74,15 +49,11 @@ export function setElementToRelative(el) {
   }
 }
 
-export function generateStyle(content, position, binding) {
-  generatePositioning(position, binding.value);
+export function generateStyle(content, binding) {  
   return `
     content: '${content}';
     position: absolute;
-    ${position.right ? `right: ${position.right};` : ''}
-    ${position.top ? `top: ${position.top};` : ''}
-    ${position.bottom ? `bottom: ${position.bottom};` : ''}
-    ${position.left ? `left: ${position.left};` : ''}
+    ${generatePositioning(binding.value, binding.modifiers)}
     font-size: .6em;
     background: #00796bcc;
     align-items: center;
