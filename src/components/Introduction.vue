@@ -9,25 +9,28 @@
       <h1 v-badge="badge2Config">Examples</h1>
       <div class="flex-row">
         <div class="flex-item-column">
-          <button-outline v-badge="{
+          <button-outline id="oi" v-badge="{
             value: buttonCounter,
-            right: '-28px',
-            top: '-4px',
+            right: '-25px',
+            top: '3px',
             styles: buttonBadgeStyle
           }" msg="Click Me!" @click.native="buttonCounter++">
           </button-outline>
         </div>
-        <span v-badge="{value: 5, styles: spanBadgeStyle, useShadowDom: false}">Within a span element!</span>
+        <span v-badge.inline="{value: 5, right: '-24px', styles: spanBadgeStyle}">Within a span element!</span>
       </div>
       <div class="flex-row">
         <div class="image-wrapper" v-badge="{value: 3, right: '88px', styles: vueBadgeStyle}">
           <img class="image" src="../assets/logo.png"/>
           <span>Wrap images in a div to add the badge, see <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=234020" target="_blank">this bug</a></span>
         </div>
-        <div class="image-wrapper" v-badge="{value: 3, right: '88px', styles: vueBadgeStyle, useShadowDom: false}" >
+        <div class="image-wrapper" v-badge="{value: 3, right: '88px', styles: vueBadgeStyle}" >
           <img class="image" src="../assets/logo.png"/>
           <span>Without shadowDom, wrap images in a div, see <a href="https://stackoverflow.com/questions/7396469/why-dont-before-and-after-pseudo-elements-work-with-img-elements" target="_blank">this anwser</a></span>
         </div>
+      </div>
+      <div class="flex-row">
+        <div v-badge.up-left.overlap="666" class="square"></div>
       </div>
     </div>
     
@@ -77,6 +80,12 @@ section {
   padding: 0 15%;
   word-break: break-word;
   line-height: 25px;
+
+  .square {
+    width: 92px;
+    height: 92px;
+    background-color: blue;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 0 7%;

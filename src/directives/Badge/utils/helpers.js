@@ -4,34 +4,36 @@
  * @param {Object} modifiers 
  */
 const generatePositioning = (values, modifiers) => {
+  const LEFT_RIGHT_VALUE = modifiers['overlap'] ? '-9px' : '-18px';
+  const TOP_BOTTOM_VALUE = modifiers['inline'] ? '0' : '-6px';
   const positioningObject = {
-    top: values.top || '0',
+    top: values.top || TOP_BOTTOM_VALUE,
     bottom: values.bottom,
-    right: values.right || '-18px',
+    right: values.right || LEFT_RIGHT_VALUE,
     left: values.left
   };
   let stringToReturn = '';
   if (modifiers['down-left']) {
-    positioningObject.bottom = '-6px';
-    positioningObject.left = '-18px';
+    positioningObject.bottom = TOP_BOTTOM_VALUE;
+    positioningObject.left = LEFT_RIGHT_VALUE;
     delete positioningObject.top;
     delete positioningObject.right;
   }
   else if (modifiers['down-right']) {
-    positioningObject.bottom = '-6px';
-    positioningObject.right = '-18px';
+    positioningObject.bottom = TOP_BOTTOM_VALUE;
+    positioningObject.right = LEFT_RIGHT_VALUE;
     delete positioningObject.left;
     delete positioningObject.top;
   }
   else if (modifiers['up-left']) {
-    positioningObject.top = '0';
-    positioningObject.left = '-18px';
+    positioningObject.top = TOP_BOTTOM_VALUE;
+    positioningObject.left = LEFT_RIGHT_VALUE;
     delete positioningObject.bottom;
     delete positioningObject.right;
   }
   else if (modifiers['up-right']) {
-    positioningObject.top = '0';
-    positioningObject.right = '-18px';
+    positioningObject.top = TOP_BOTTOM_VALUE;
+    positioningObject.right = LEFT_RIGHT_VALUE;
     delete positioningObject.bottom;
     delete positioningObject.left;
   }
