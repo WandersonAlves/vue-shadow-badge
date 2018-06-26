@@ -9,9 +9,9 @@
       <h1 v-badge="badge2Config">Examples</h1>
       <div class="flex-row">
         <div class="flex-item-column">
-          <button-outline v-badge="{
+          <button-outline v-badge.down-left="{
             value: buttonCounter,
-            right: '-25px',
+            right: '-28px',
             top: '-4px',
             styles: buttonBadgeStyle
           }" msg="Click Me!" @click.native="buttonCounter++">
@@ -57,7 +57,6 @@ export default {
         color: white;
         font-size: 1em;
         border: 2px solid white;
-        right: -24px;
       `,
       vueBadgeStyle: `
         background-color: #41b883;
