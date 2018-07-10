@@ -4,8 +4,8 @@ import {
 
 /**
  * Fallback if browser doesn't have support for shadow-dom or user set useShadowDom: false
- * @param {HTMLElement} el 
- * @param {Object} binding 
+ * @param {HTMLElement} el
+ * @param {Object} binding
  */
 export function createBadgeFallback(el, binding) {
   // Create a new style tag

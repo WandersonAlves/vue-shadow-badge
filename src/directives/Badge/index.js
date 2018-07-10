@@ -35,7 +35,7 @@ const make = (el, binding) => {
       setElementToRelative(el);
       createBadgeFallback(el, binding);
     }
-  } 
+  }
 }
 
 /**

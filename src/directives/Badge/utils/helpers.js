@@ -1,7 +1,7 @@
 /**
  * Generate badge positioning
- * @param {Object} values 
- * @param {Object} modifiers 
+ * @param {Object} values
+ * @param {Object} modifiers
  */
 const generatePositioning = (values, modifiers) => {
   const LEFT_RIGHT_VALUE = modifiers['overlap'] ? '-9px' : '-18px';
@@ -55,7 +55,7 @@ export function canThisBrowserUseShadowDom() {
 
 /**
  * If element is not relative, set it to relative
- * @param {HTMLElement} el 
+ * @param {HTMLElement} el
  */
 export function setElementToRelative(el) {
   if (window.getComputedStyle(el).getPropertyValue('position') !== 'relative') {
@@ -64,10 +64,10 @@ export function setElementToRelative(el) {
 }
 /**
  * Generate CSS attributes for current badge
- * @param {string|number} content 
+ * @param {string|number} content
  * @param {Object} binding
  */
-export function generateStyle(content, binding) {  
+export function generateStyle(content, binding) {
   return `
     content: '${content}';
     position: absolute;

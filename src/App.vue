@@ -15,15 +15,6 @@ export default {
     Jumbo,
     Introduction
   },
-  mounted() {
-    // Check support for shadow dom
-    if (document.head.createShadowRoot || document.head.attachShadow) {
-      console.log('yay, it works');
-    }
-    else {
-      console.log('sad');
-    }
-  }
 }
 </script>
 
