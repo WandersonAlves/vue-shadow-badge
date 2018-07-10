@@ -29,11 +29,12 @@
           <span>Without shadowDom, wrap images in a div, see <a href="https://stackoverflow.com/questions/7396469/why-dont-before-and-after-pseudo-elements-work-with-img-elements" target="_blank">this anwser</a></span>
         </div>
       </div>
+      <span>(divs are elements without fixed size)</span>
+      <br>
       <div class="flex-row">
         <div v-badge.up-left.overlap="666" class="square"></div>
       </div>
     </div>
-    
   </section>
 </template>
 <script>
@@ -81,6 +82,10 @@ section {
   word-break: break-word;
   line-height: 25px;
 
+  span {
+    font-size: 0.8em;
+  }
+
   .square {
     width: 92px;
     height: 92px;
@@ -96,9 +101,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    span {
-      font-size: 0.8em;
-    }
   }
 
   .image {
