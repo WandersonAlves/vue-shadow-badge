@@ -1,6 +1,6 @@
 {
   "name": "vue-shadow-badge",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Simple badge directive using shadow-dom",
   "main": "./dist/Badge.common.js",
   "author": "WandersonAlves <wandersonalvesferreira2012@gmail.com>",
