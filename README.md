@@ -1,5 +1,6 @@
 # vue-shadow-badge!
 
+![logo](https://github.com/WandersonAlves/vue-shadow-badge/blob/master/prints/vue-badge.png?raw=true)
 
 [![GitHub stars](https://img.shields.io/github/stars/WandersonAlves/vue-shadow-badge.svg?style=flat-square)](https://github.com/WandersonAlves/vue-shadow-badge/stargazers)
 [![GitHub license](https://img.shields.io/github/license/WandersonAlves/vue-shadow-badge.svg?style=flat-square)](https://github.com/WandersonAlves/vue-shadow-badge)
