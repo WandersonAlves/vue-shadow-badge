@@ -5,6 +5,10 @@
 [![GitHub stars](https://img.shields.io/github/stars/WandersonAlves/vue-shadow-badge.svg?style=flat-square)](https://github.com/WandersonAlves/vue-shadow-badge/stargazers)
 [![GitHub license](https://img.shields.io/github/license/WandersonAlves/vue-shadow-badge.svg?style=flat-square)](https://github.com/WandersonAlves/vue-shadow-badge)
 
+## DEPRECATED
+
+element.createShadowRoot is [DEPRECATED](https://developer.mozilla.org/en-US/docs/Web/API/Element/createShadowRoot), and using [element.attachShadow](https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow) don't seens to work on the examples. Using fallback currently works (for anyone willing to study this directive). And Vue 3 is close to be released, so, this directive will not receive any update from me. Thanks!
+
 
 ## Instalation
 
